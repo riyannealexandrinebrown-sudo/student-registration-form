@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>IT Seminar Registration</h2>
+    
+    <form id="registrationForm" novalidate>
+      <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" placeholder="e.g. Juan Cruz">
+        <span class="error" id="nameError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="studentNumber">Student Number</label>
+        <input type="text" id="studentNumber" placeholder="e.g. 12-3456-789">
+        <span class="error" id="studentNumberError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="e.g. student@univ.edu">
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="workshop">Workshop</label>
+        <select id="workshop">
+          <option value="default">-- Select Workshop --</option>
+          <option value="webdev">Web Development Basics</option>
+          <option value="cybersecurity">Cybersecurity Essentials</option>
+          <option value="datascience">Data Science Fundamentals</option>
+        </select>
+        <span class="error" id="workshopError"></span>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms">
+        <label for="terms">I accept the Terms and Conditions</label>
+        <span class="error" id="termsError"></span>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" id="registerBtn">Register</button>
+        <button type="button" id="clearBtn">Clear</button>
+      </div>
+    </form>
+
+    <!-- Registration Result Summary -->
+    <div id="registrationResult" class="result-container">
+      <h3>Registration Summary</h3>
+      <p><strong>Name:</strong> <span id="summaryName"></span></p>
+      <p><strong>Student Number:</strong> <span id="summaryStudentNumber"></span></p>
+      <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+      <p><strong>Workshop:</strong> <span id="summaryWorkshop"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
